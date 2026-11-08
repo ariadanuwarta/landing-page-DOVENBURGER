@@ -1,0 +1,20 @@
+# DOVEN BURGER - pengaturan Apache (XAMPP / hosting umum). Aman diabaikan di server lain.
+
+# Manifest PWA
+<IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Jangan layani berkas internal lewat browser
+<FilesMatch "\.(sql|md)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
+
+# Service worker harus selalu segar
+<Files "sw.js">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache"
+    </IfModule>
+</Files>

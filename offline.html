@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f97316">
+    <title>Kamu sedang offline | DOVEN BURGER</title>
+    <style>
+        :root { --bg: #f8fafc; --ink: #0f172a; --muted: #64748b; }
+        @media (prefers-color-scheme: dark) { :root { --bg: #0b1120; --ink: #f1f5f9; --muted: #94a3b8; } }
+        * { box-sizing: border-box; margin: 0; }
+        body { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; text-align: center; background: var(--bg); color: var(--ink); font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; line-height: 1.6; }
+        main { max-width: 420px; display: grid; justify-items: center; gap: .9rem; }
+        img { width: 112px; height: 112px; border-radius: 28px; box-shadow: 0 20px 40px -16px rgba(249, 115, 22, .6); }
+        h1 { font-size: 1.7rem; font-weight: 900; letter-spacing: -.04em; }
+        p { color: var(--muted); }
+        button { margin-top: .6rem; padding: .9rem 1.8rem; border: 0; border-radius: 999px; font: inherit; font-weight: 700; color: #fff; cursor: pointer; background: linear-gradient(135deg, #f97316, #ea580c); box-shadow: 0 10px 30px -6px rgba(249, 115, 22, .55); }
+        button:focus-visible { outline: 3px solid rgba(249, 115, 22, .55); outline-offset: 3px; }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="assets/icons/icon-192.png" alt="" width="112" height="112">
+        <h1>Kamu sedang offline</h1>
+        <p>Burger kami butuh koneksi internet untuk menerima pesanan. Periksa sinyal atau Wi-Fi kamu, lalu coba lagi.</p>
+        <button type="button" onclick="location.reload()">Coba lagi</button>
+    </main>
+</body>
+</html>
